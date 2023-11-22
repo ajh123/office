@@ -1,2 +1,2 @@
 # office
-A one day altenative to Microsoft 365
+A, one day, alterative to Microsoft 365

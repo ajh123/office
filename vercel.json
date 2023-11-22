@@ -1,4 +1,5 @@
 {
+    "buildCommand": "npm run dev",
     "builds": [
         {
             "src": "miners_online_office/wsgi.py",
