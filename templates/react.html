@@ -5,6 +5,12 @@
     </head>
     <body>
         <div id="root"></div>
+        {% load js %}
+
+        <script type="text/javascript">
+            var now = {{ now | js }};
+            console.log(now);
+        </script>
         <script src="{% static 'index-bundle.js' %}"></script>
     </body>
 </html>
