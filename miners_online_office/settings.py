@@ -38,8 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'miners_core'
+    'miners_core',
+    'home'
 ]
+
+INCLUDED_APPS = ['home']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

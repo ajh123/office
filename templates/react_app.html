@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{app}} - Miners Online Office</title>
+    </head>
+    <body>
+        <div id="app_root"></div>
+        {% load js %}
+
+        <script type="text/javascript">
+            window.app = {{ app | js }};;
+            window.miners_office = {
+                path_base: "/app/"
+            }
+        </script>
+        <script src="{% static 'index-bundle.js' %}"></script>
+    </body>
+</html>

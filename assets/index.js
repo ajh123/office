@@ -5,6 +5,7 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import { FluentProvider, webLightTheme, Button } from '@fluentui/react-components';
+import { render } from '../home/assets/index'
 
 const router = createBrowserRouter([
     {
@@ -17,8 +18,8 @@ const router = createBrowserRouter([
         </div>,
     },
     {
-        path: "/apps",
-        element: <div>Hello apps.</div>,
+        path: "/app/"+window.app,
+        element: render(),
     },
 ]);
 
