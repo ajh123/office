@@ -7,7 +7,8 @@ import {
 import { FluentProvider, webLightTheme, Button } from '@fluentui/react-components';
 import { render } from '../home/assets/index'
 
-const router = createBrowserRouter([
+
+let routes = [
     {
         path: "/",
         element: <div>
@@ -15,13 +16,18 @@ const router = createBrowserRouter([
                 Hello world!
                 <Button appearance="primary">I am a button.</Button>
             </FluentProvider>
-        </div>,
-    },
-    {
-        path: "/app/"+window.app,
+        </div>
+    }
+]
+
+if (window.app != undefined) {
+    routes.push({
+        path: window.miners_office.path_base+window.app,
         element: render(),
-    },
-]);
+    })
+}
+
+const router = createBrowserRouter(routes);
 
 ReactDOM.render(
     <React.StrictMode>
