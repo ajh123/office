@@ -4,11 +4,17 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
+import { FluentProvider, webLightTheme, Button } from '@fluentui/react-components';
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <div>Hello world!</div>,
+        element: <div>
+            <FluentProvider theme={webLightTheme}>
+                Hello world!
+                <Button appearance="primary">I am a button.</Button>
+            </FluentProvider>
+        </div>,
     },
     {
         path: "/apps",
