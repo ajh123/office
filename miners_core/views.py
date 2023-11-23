@@ -4,7 +4,7 @@ from datetime import datetime
 from django.http import HttpResponse
 
 
-def index(request):
+def react(request):
     now = datetime.now()
     context = {"now": now}
-    return render(request, "index.html", context)
+    return render(request, "react.html", context)

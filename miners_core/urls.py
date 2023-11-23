@@ -1,9 +1,9 @@
 from django.urls import path
 
-from miners_core.views import index
+from miners_core.views import react
 
 
 urlpatterns = [
-    path('', index),
-    path('apps', index),
+    path('', react),
+    path('apps', react),
 ]
