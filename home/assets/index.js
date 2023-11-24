@@ -1,8 +1,8 @@
 import React from 'react';
-import { FluentProvider, webLightTheme, Button } from '@fluentui/react-components';
+import { FluentProvider, webDarkTheme, Button } from '@fluentui/react-components';
 
 export function render() {
-    return <FluentProvider theme={webLightTheme}>
+    return <FluentProvider theme={webDarkTheme}>
         Hello app world!
         <Button appearance="primary">I am a button.</Button>
     </FluentProvider>

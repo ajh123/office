@@ -4,19 +4,17 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import { FluentProvider, webLightTheme, Button } from '@fluentui/react-components';
+import { FluentProvider, webDarkTheme, Button } from '@fluentui/react-components';
 import { render } from '../home/assets/index'
 
 
 let routes = [
     {
         path: "/",
-        element: <div>
-            <FluentProvider theme={webLightTheme}>
-                Hello world!
-                <Button appearance="primary">I am a button.</Button>
-            </FluentProvider>
-        </div>
+        element: <FluentProvider theme={webDarkTheme}>
+            Hello world!
+            <Button appearance="primary">I am a button.</Button>
+        </FluentProvider>
     }
 ]
 
