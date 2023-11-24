@@ -8,6 +8,13 @@ import { FluentProvider, webLightTheme, Button } from '@fluentui/react-component
 import { render } from '../home/assets/index.tsx'
 
 
+interface  OfficeWindow extends Window {
+    app: string,
+    miners_office: {
+        path_base: string
+    }
+}
+
 let routes = [
     {
         path: "/",
@@ -18,9 +25,10 @@ let routes = [
     }
 ]
 
-if (window.app != undefined) {
+let win = (window as unknown) as OfficeWindow;
+if (win.app != undefined) {
     routes.push({
-        path: window.miners_office.path_base+window.app,
+        path: win.miners_office.path_base+win.app,
         element: render(),
     })
 }
