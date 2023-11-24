@@ -4,8 +4,9 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import { FluentProvider, webLightTheme, Button } from '@fluentui/react-components';
+import { Button } from '@fluentui/react-components';
 import { render } from '../home/assets/index.tsx'
+import { AppBase } from './app_base.tsx'
 
 
 interface  OfficeWindow extends Window {
@@ -18,10 +19,10 @@ interface  OfficeWindow extends Window {
 let routes = [
     {
         path: "/",
-        element: <FluentProvider theme={webLightTheme}>
+        element: <AppBase>
             Hello world!
             <Button appearance="primary">I am a button.</Button>
-        </FluentProvider>
+        </AppBase>
     }
 ]
 
@@ -36,8 +37,6 @@ if (win.app != undefined) {
 const router = createBrowserRouter(routes);
 
 ReactDOM.render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>,
+    <RouterProvider router={router} />,
     document.getElementById('root')
 );
