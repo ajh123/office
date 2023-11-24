@@ -5,7 +5,7 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import { FluentProvider, webLightTheme, Button } from '@fluentui/react-components';
-import { render } from '../home/assets/index'
+import { render } from '../home/assets/index.tsx'
 
 
 let routes = [
